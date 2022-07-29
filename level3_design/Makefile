@@ -4,10 +4,10 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/               # provide your design path
+VERILOG_SOURCES = $(PWD)/stack_buggy.v
 
-TOPLEVEL :=           # design file
-MODULE   :=     # test file
+TOPLEVEL := stack          # design
+MODULE   :=  stack_tb    # test
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
