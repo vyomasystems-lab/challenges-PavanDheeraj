@@ -74,9 +74,10 @@ case(sel)
       5'b11101: out = inp29; // condition missing for inp30 -----> BUG
       default: out = 0;
     endcase
-![mux_1](https://user-images.githubusercontent.com/58168687/182023475-876cb8a3-6cbd-4b4c-a30f-f0fa58585e6c.PNG)
-![mux_2](https://user-images.githubusercontent.com/58168687/182023484-91fd678d-dfd1-4010-8415-134cd4c9bd92.PNG)
-```
+
+![mux_1](https://user-images.githubusercontent.com/58168687/182023820-abccdfb5-b9a9-41e2-be7d-81705b012e3f.PNG)
+![mux_2](https://user-images.githubusercontent.com/58168687/182023826-003c4408-21ac-4ada-aef8-366450e4d46d.PNG)
+
 For the mux design, the case condition for inp12 must have been "01100" instead of "01101" as in the design code.
 The case condition for inp30 is missing in the design.
 
