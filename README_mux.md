@@ -19,7 +19,7 @@ Input port's "inp*" are tied to a fixed value of 1.
  dut.inp*.value=A
 ```
 
-The assert statement is used for comparing the adder's outut to the expected value.
+The assert statement is used for comparing the mux's output to the expected value.
 
 The following error is seen:
 ```
