@@ -34,7 +34,7 @@ async def test_stack(dut):
             dut.push.value=1
             print("push operation")
         else:
-            dut.pop.value=0
+            dut.pop.value=1
             print("pop operation")
             
         #print(cocotb.utils.get_sim_time("us"))
