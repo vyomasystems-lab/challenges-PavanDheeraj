@@ -9,7 +9,7 @@ Gitpod Environment
 
 ## Verification Environment
 
-The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (mux module here) which takes in "4" 32-bit inputs (mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3) and gives "1" 33-bit output (mav_putvalue)
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (bit manipulation coprocessor module here) which takes in "4" 32-bit inputs (mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3) and gives "1" 33-bit output (mav_putvalue)
 
 The values are assigned to the input port "mav_putvalue_instr" using a list which contains the instruction values which can be given to the DUT(for which behavior is defined). Values are assigned to the input ports "mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3" using "randint" function imported from "random"
 
@@ -42,10 +42,6 @@ error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = 
 assert dut_output == expected_mav_putvalue, error_message
 
 ```
-mav_putvalue_instr =  0x40007033
-mav_putvalue_scr1 =  0x81b5efc5
-mav_putvalue_src2 =  0x342c471d
-mav_putvalue_src3 =  0x8086c40f
 
 ## Test Scenario **(Important)**
 1. - Test Inputs: mav_putvalue_instr=0x40007033, mav_putvalue_scr1=0x81b5efc5,mav_putvalue_src2=0x342c471d,mav_putvalue_src3=0x8086c40f
@@ -58,7 +54,7 @@ mav_putvalue_src3 =  0x8086c40f
    - Observed output: out=0x1518bc0a9
    Output mismatches for the above inputs proving that there is a design bug
 
-From the above scenario's, it is observed that there is a design bug in ANDN instruction.
+From the above scenario's, it is observed that there is a design bug in ANDN instruction in the instruction set.
 
 ## Design Bug
 Based on the above test inputs and analysing the design, we see the following
@@ -67,7 +63,7 @@ Test Case 1:
 Test Case 2:
 ![bit_manip_error_2](https://user-images.githubusercontent.com/58168687/182033366-8bd2f90e-92ad-4a0f-850c-ddbc96e4821e.PNG)
 
-For this design, there is a bug in the implementation of ANDN function.
+For this design, there is a bug in the implementation of ANDN function in the instruction set.
 
 ## Verification Strategy
 The values corresponding to different instructions were created as a list. Test would continue until there is a mismatch between the DUT output and model output, when a mismatch is detected, the loop terminates. Everytime an instruction would be picked from a list containing different instructions. The operands are generated randomly with their lower limit and upper limit defined. After extensive testing, it is observed that there is design bug in ANDN instruction implementation.
