@@ -18,7 +18,7 @@ reg [address_bus_width-1:0] ptr;
 reg [data_bus_width-1:0] mem[0:depth-1];
 
 //points to the top of stack, location where the latest data pushed into the stack is present.
-assign top_of_stack=ptr-1;
+assign top_of_stack=ptr;
 
 //generate full and empty conditions
 assign full = (ptr==depth-1)? 1'b1: 1'b0;
