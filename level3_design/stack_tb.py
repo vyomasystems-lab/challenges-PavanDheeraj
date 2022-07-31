@@ -21,30 +21,41 @@ async def test_stack(dut):
     dut.rst_n.value = 0
     await Timer(10,"us")
     dut.rst_n.value = 1
-
-    for i in range(17):
+    flag=0
+    max_Val=10
+    for i in range(max_Val):
+        #print(i)
+        dut.push.value=0
+        dut.pop.value=0
         if(i==0):
             print("checking empty flag when stack is empty")
             print("empty flag is {empty}".format(empty=dut.empty.value))
-            print('\n')
+
         
-        #since we are doing a push and pop operation alternatively, top_of_stack should always be 0.
+        #since we are doing a push and pop operation alternatively, top_of_stack should either be 1(when data is pushed) or 0(when data is popped).
 
         if(i%2==0):
             dut.push.value=1
-            print("push operation")
+            #print("push operation")
         else:
             dut.pop.value=1
-            print("pop operation")
+            #print("pop operation")
             
         #print(cocotb.utils.get_sim_time("us"))
         await RisingEdge(dut.clk)
         await Timer(10,"us")
         top_of_stack=int(dut.top_of_stack.value)
-        if(top_of_stack>0):
+        if(top_of_stack>1):
+            flag=1
             print("top of stack is {top_of_stack}".format(top_of_stack=top_of_stack))
             print("test failed")
             break
-        print('\n')
-        
+
+    if(flag==0):
+        print("stack design is error free")
+    else:
+        print("stack design is buggy")
+    
+    assert flag == 0, "Test failed"
+
     cocotb.log.info('#### CTB: Test Developed! ######')
