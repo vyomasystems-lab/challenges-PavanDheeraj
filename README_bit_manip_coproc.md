@@ -57,6 +57,7 @@ From the above scenario's, it is observed that there is a design bug in ANDN ins
 
 ## Design Bug
 Based on the above test inputs and analysing the design, we see the following
+
 Test Case 1:
 ![bit_manip_error_1](https://user-images.githubusercontent.com/58168687/182033351-d5f3e0e2-d414-4f4a-84b8-a76306190707.PNG)
 Test Case 2:
