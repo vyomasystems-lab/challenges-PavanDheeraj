@@ -84,59 +84,59 @@ Test inputs are mentioned in the following format:
    Output mismatches for the above inputs proving that there is a design bug
 
 10. - Test Inputs: "107" "01101011"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 11. - Test Inputs: "108" "01101100"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 12. - Test Inputs: "109" "01101101"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 13. - Test Inputs: "110" "01101110"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 14. - Test Inputs: "111" "01101111"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 15. - Test Inputs: "123" "01111011"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 16. - Test Inputs: "155" "10011011" 
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
 
 17. - Test Inputs: "172" "10101100"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
  
 18. - Test Inputs: "173" "10101101"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
    
 19. - Test Inputs: "174" "10101110"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
    
 20. - Test Inputs: "175" "10101111"
-   - Expected Output: out=1
-   - Observed Output in the DUT dut.seq_seen.value=0
-   Output mismatches for the above inputs proving that there is a design bug
+    - Expected Output: out=1
+    - Observed Output in the DUT dut.seq_seen.value=0
+    Output mismatches for the above inputs proving that there is a design bug
    
 21. - Test Inputs: "187" "10111011" ---> Special Case
    
