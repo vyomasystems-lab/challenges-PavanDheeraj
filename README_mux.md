@@ -75,7 +75,9 @@ case(sel)
       default: out = 0;
     endcase
 ```
+Test Case 1:
 ![mux_1](https://user-images.githubusercontent.com/58168687/182023820-abccdfb5-b9a9-41e2-be7d-81705b012e3f.PNG)
+Test Case 2:
 ![mux_2](https://user-images.githubusercontent.com/58168687/182023826-003c4408-21ac-4ada-aef8-366450e4d46d.PNG)
 
 For the mux design, the case condition for inp12 must have been "01100" instead of "01101" as in the design code.
