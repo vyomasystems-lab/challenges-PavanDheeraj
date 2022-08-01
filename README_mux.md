@@ -31,11 +31,13 @@ assert dut.out.value == A, "Randomised test failed with: {sel} with {out}".forma
 1. - Test Inputs: sel=12 inp12=1
    - Expected Output: out=1
    - Observed Output in the DUT dut.out.value=0
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 2. - Test Inputs: sel=30 inp30=1
    - Expected Output: out=1
    - Observed output: out=0
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Bug
