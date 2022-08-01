@@ -25,14 +25,16 @@ assert flag == 0, "Test failed"
 ```
 ## Test Scenario **(Important)**
 clk signal is not mentioned in the test inputs section
-1. - Test Inputs: dut.push.value=1 and dut.pop.value=1 are given for alternate clock cycles with push aseerted first
+1. - Test Inputs: dut.push.value=1 and dut.pop.value=1 are given for alternate clock cycles with push asserted first
    - Expected Output: top_of_stack=0( after pop operation) 
    - Observed Output in the DUT dut.top_of_stack.value=2
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 2. - Test Inputs: dut.rst_n.value = 0, dut.rst_n.value = 1
    - Expected Output: empty=1
    - Observed output: dut.empty.value=0
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Bug
@@ -61,8 +63,8 @@ Test Case 1:
 Test Case 2:
 ![stack_empty](https://user-images.githubusercontent.com/58168687/182054142-54f53bc7-50be-4c4f-97fa-e350e3ce3603.PNG)
 
-In the stack design, for the empty flag generation after the reduction OR operation, the result should be given to NOT gate to get the correct output. 
-In the always block, for pop statement, the pointer should get decremented instead of getting incremented.
+1. In the stack design, for the empty flag generation after the reduction OR operation, the result should be given to NOT gate to get the correct output. 
+2. In the always block, for pop statement, the pointer should get decremented instead of getting incremented.
 
 ## Design Fix
 Updating the design and re-running the test makes the test pass.
