@@ -1,4 +1,4 @@
-Capture The Bug Hackathon
+#Capture The Bug Hackathon
 
 README files for different designs in hackathon are listed below:
 The README files follow the format given in the adder example(screening).
