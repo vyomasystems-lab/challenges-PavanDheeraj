@@ -46,11 +46,13 @@ assert dut_output == expected_mav_putvalue, error_message
 1. - Test Inputs: mav_putvalue_instr=0x40007033, mav_putvalue_scr1=0x81b5efc5,mav_putvalue_src2=0x342c471d,mav_putvalue_src3=0x8086c40f
    - Expected Output: out=0x103235181
    - Observed Output in the DUT dut.mav_putvalue.value=0x488e0b
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 2. - Test Inputs: mav_putvalue_instr=0x40007033, mav_putvalue_scr1=0xb9c5e854, mav_putvalue_src2=0xecf7f6df, mav_putvalue_src3=0x43c68551
    - Expected Output: out=0x22001001
    - Observed output: out=0x1518bc0a9
+   
    Output mismatches for the above inputs proving that there is a design bug
 
 From the above scenario's, it is observed that there is a design bug in ANDN instruction in the instruction set.
