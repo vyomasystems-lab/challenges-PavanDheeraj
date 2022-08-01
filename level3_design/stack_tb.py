@@ -30,6 +30,9 @@ async def test_stack(dut):
         if(i==0):
             print("checking empty flag when stack is empty")
             print("empty flag is {empty}".format(empty=dut.empty.value))
+            if(dut.empty.value!=1):
+                flag=1
+                break
 
         
         #since we are doing a push and pop operation alternatively, top_of_stack should either be 1(when data is pushed) or 0(when data is popped).
