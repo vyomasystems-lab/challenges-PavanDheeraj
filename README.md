@@ -1,4 +1,3 @@
-# challenges-PavanDheeraj
 Capture The Bug Hackathon
 
 README files for different designs in hackathon are listed below:
